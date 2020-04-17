@@ -1,0 +1,5 @@
+font viết tay: UTM ViceroyJF
+font-primary: UTM Neo Sans Intel
+main-color: #a21b95
+text-color: #cc00cc
+icon-social-link color: #3cbfee

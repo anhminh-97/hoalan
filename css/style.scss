@@ -1,0 +1,290 @@
+@font-face{
+    font-family: 'UTM Neo';
+    src: url('UTM\ Neo\ Sans\ Intel_3.ttf');
+}
+@font-face{
+    font-family: 'UTM Viceroy';
+    src: url('UTM\ ViceroyJF_3.ttf');
+}
+$main-color:#a21b95;
+$text-color:#cc00cc;
+body{
+    a{color: white;}
+    a:hover{text-decoration: none;}
+    button, input{outline: none;}
+}
+.grid-1140{width: 1140px;margin: 0 auto;}
+ul{list-style: none;padding: 0;}
+header{
+    .header__bg{
+        height: 127px;
+        background: url("header.jpg");
+        background-size: 100%;
+    }
+}
+.nav-menu{
+    height: 30px;
+    position: relative;
+    z-index: 10;
+    ul{
+        li a{font-weight: 550;}
+    }
+}
+nav{
+    .nav__bg{
+        width: 100%;
+        height: 174px;
+        background: url(navbar.png);
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        .nav__contact{
+            position: absolute;
+            bottom: 20px;
+            right: 120px;
+            .number-phone{font-weight: 550;}
+            .shopping-cart{
+                a{color: black;}
+            }
+        }   
+    }
+}
+main{
+    font-family: 'UTM Neo';
+    font-weight: 550;
+    .about-us{
+        padding-top: 40px;
+        .about-us__img{
+            img{width: 100%;height: auto;}
+        }
+        .about-us__content--align{text-align: right;}
+        .about-us__content{
+            padding-top: 10px;
+            span a{font-size: 2.5rem;font-family: 'UTM Viceroy';color: $text-color;}
+            .line-bottom{border-bottom: 2px dotted $text-color;}
+            p{
+                padding-top: 20px;
+                margin-bottom: 70px;
+                font-size: 1.2rem;
+                overflow-y: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 5;
+            }
+            .btn{
+                background-color: $main-color;
+                border-radius: 20px;
+                margin: 0 auto;
+                padding: 4px;
+                transform: translateX(50%);
+                a{font-size: 1.1rem;}
+                &:hover{background-color: $text-color;}
+            }
+        }
+    }
+    .bg-gradient{
+        width: 100%;
+        background: url(bg-slider.jpg) no-repeat;
+        background-size: 100% 100%;
+        padding: 70px 0 50px 0;
+    }
+    .owl-dot{display: none;}
+    .bg-product{
+        .product-heading{
+            h2{color: $main-color; margin-bottom: 40px;}
+        }
+        .slider-product{
+            .item{
+                margin-left: 15px;
+                position: relative;
+                .product__img{height: auto;width: 100%;}
+                .product__content{
+                    background-color: white;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    p{margin: 10px 0;}
+                    a{
+                        color: yellow;
+                        display: inline-block;
+                        background-color: $main-color;
+                        padding: 5px 15px;
+                        font-size: 0.9rem;
+                        &:hover{color:white}
+                    }
+                }
+                .label{
+                    position: absolute;
+                    top: -3px;
+                    left: -3px;
+                }
+            }
+        }
+    }
+    .banner{
+        width: 100%;
+        img{width: 100%;height: auto;}
+    }
+    .register-email{
+        width: 100%;
+        height: 81px;
+        background-color: #485948;
+        .register-email__content{
+            display: flex;
+            flex-flow: row wrap;
+            .register__contact{
+                img{width: 100%;height: auto;}
+            }
+            .input-group{
+                padding: 1px 2px 0 2px;
+                height: 40px;
+                border: 1px solid palevioletred;
+                border-radius: 20px;
+                input{border: none;height: 100%;color:white}
+                button{
+                    color: white;
+                    height: 100%;
+                    border: none;
+                    background: url(btn-email.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    .news{
+        p{
+            overflow-y: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .news__time{
+            font-size: 0.75rem;
+            img{margin-right: 5px;}
+        }
+        h2{color: $main-color}
+        .news__left{
+            width: 40%;
+            .new__img{
+                width: 100%;
+                img{width: 100%;height: auto;}
+            }
+            h5{color: $main-color;}
+        }   
+        .news__right{
+            h6{color: $main-color;}
+        }
+    }
+}
+// ==============================mobile
+@media only screen and (max-width:500px){
+    main{
+        .about-us{
+            margin-bottom: 20px;
+            display: flex;
+            flex-flow: row wrap;
+            .about-us__content--align{text-align: left;}
+            .about-us__content{
+                p{font-size: 1rem;}
+            }
+        }
+        .bg-product{
+            .slider-product{
+                .item{
+                    .product__content{
+                        p{margin: 5px 0;font-size: 0.8rem;}
+                        a{padding: 3px 15px;font-size: 0.7rem;}
+                    }
+                }
+            }
+        }
+        .register-email{
+            .register-email__content{
+                h5{font-size: 1rem;}
+        }}
+    }
+}
+// ===============================tablet
+@media (max-width:991px) and (min-width:500px){
+
+
+}
+// ================================tablet & mobile
+@media only screen and (max-width:1200px){
+    .grid-1140{width: 95%;margin: 0 auto;}
+    header{
+        .header__bg{
+            height: 50px;
+        }
+        .header__content{
+            height: 100%;
+            .header__logo{
+                height: 100%;
+                a{
+                    display: block;
+                    height: 100%;
+                    img{height: 90%;width: auto;}
+                }
+            }
+            .hamburger-menu, .cart-shopping{
+                i{
+                    color: palevioletred;
+                }
+            }
+            .cart-shopping{
+                margin-right: 20px;
+            }
+        }
+    }
+    nav{
+        .nav__bg{
+           .nav__contact{
+            position: absolute;
+            right: 70px;
+           }
+        }
+    }
+    main{
+        .about-us{
+            .about-us__content{
+                p{margin-bottom: 20px;}
+            }
+        }
+    }
+}
+// ==================================laptop
+@media (max-width:1200px) and (min-width:992px){
+
+}
+//================================desktop
+@media only screen and (min-width:1920px){
+    header{
+        width: 1920px;
+        margin: 0 auto;
+        .header__bg{width: 100%;margin: 0 auto;}
+    }
+    nav.row{
+        .nav__bg{
+            width: 1920px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            .nav__contact{
+                position: absolute;
+                right: 200px;
+            }
+        }
+    }
+    main{
+        .slider-banner,.banner, .register-email{
+            width: 1920px;
+            margin: 0 auto;
+        }
+        .bg-gradient{
+            background-size: 1920px;
+            background-position: center;
+        }
+    }
+}
